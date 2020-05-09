@@ -1,12 +1,10 @@
-# WELCOME!
-Walk you through stuff
+# Windows Starter Pack for Bolt
 
 ## Table of Contents
 
 | Section | Description |
 |---------|-------------|
-| [Working with Bolt](#working-with-bolt) | A quick run through using Bolt at the command line.
-| [Using PowerShell with Puppet & Bolt](#powershell) | Level up your PowerShell with our tools.
+| [Working with Bolt](#working-with-bolt) | A quick run through using Bolt at the command line and setting up your environment to work with this guide.
 | [Baseline Configuration Items](#baseline) | Learn the desired state approach creating a baseline for consistent server builds.
 | [Windows Security](#security) | Firewalls, AV and GPOs aren't a problem for Puppet and Bolt. Learn how to manage security tools and apply policy with desired state.
 | [Windows Updates](#windows-updates) | A patching primer for updating your Windows servers. 
@@ -17,20 +15,12 @@ Walk you through stuff
 
 ### [Working with Bolt](#working-with-bolt)
 - [Installing Bolt](working-with-bolt/installing.md) 
-- [What can I do with Bolt?](working-with-bolt/what-can-i-do.md)
-- [Writing Tasks & Plans](working-with-bolt/writing-tasks-and-plans.md)
-- [Documenting Tasks](working-with-bolt/documenting-tasks)]
-- [Using Puppet DSL in Bolt Plans](working-with-bolt/using-puppet-modules-and-code-in-bolt-plans.md)
 - [Setting Up Your Inventory File](working-with-bolt/setup-inventory-file.md)
+- [What can I do with Bolt?](working-with-bolt/what-can-i-do.md)
+- [Using Puppet DSL in Bolt Plans](working-with-bolt/using-puppet-modules-and-code-in-bolt-plans.md)
+- [Writing Tasks & Plans](working-with-bolt/writing-tasks-and-plans.md)
+- [Documenting Tasks](working-with-bolt/documenting-tasks)
 - [Using Puppet Forge Modules](working-with-bolt/using-the-forge.md)
-
-### [Using PowerShell with Puppet & Bolt](#powershell)
-
-- [Running PowerShell commands using Bolt](powershell/running-powershell-commands.md)
-- [Running PowerShell scripts with Bolt](powershell/running-powershell-scripts)
-- [Converting Scripts and Commands into Bolt Tasks](powershell/converting-scripts-and-commands.md)
-- [Breaking up Large Scripts into Tasks & Plans](powershell/breaking-up-large-scripts.md)
-- [Moving Tasks into Puppet Enterprise](powershell/tasks-in-pe.md)
 
 ### [Baseline Configuration Items](#baseline)
 - [What is a Baseline Configuration?](baseline/what-is-a-baseline.md)

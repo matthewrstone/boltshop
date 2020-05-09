@@ -6,8 +6,8 @@ Bolt is an incredibly versatile tool. You can do anything from run a simple comm
 |--------|-------------|---------|
 |bolt command| Runs a single command against target(s). Defaults to PowerShell | `bolt command run "Install-WindowsFeature Web-WebServer" -t web_servers"` would install IIS on a list of web_server targets.
 |bolt script| Runs a script in any language against target(s). *Note: The remote host must be able to execute that script. Something like running a Python script on Windows without Python installed on the target will not work.* | `bolt script run `
-
-
+|bolt task| Run a task, which is a script on guardrails essentially. Deeper explanation in a few sections. | `bolt task run mymodule::mytask --targets localhost` runs your task against your local system.
+|bolt plan| Run a plan, which is an orchestrated workflow made up of commands, scripts, tasks, plans and/or even puppet DSL code.| `bolt plan run mymodule::myplan --targets dc01` runs the plan against a single system.
 
 After you run `bolt` with `command`, `script`, `task`, or `plan`, you can also show what's available on your system by using `show` instead of `run`. For example:
 
