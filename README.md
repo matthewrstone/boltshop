@@ -10,10 +10,13 @@ This is a 'hands-on' type of guide. While you can read through to get an underst
 
 Puppet (the Company) develops a set of tools, both open source and commercial, that help you to automate many of the tasks or "workflows" required to manage your infrastructure. These tools include:
 
-    * Bolt, an open source task runner and orchestation tool.
-    * Puppet (the tool), an open source configuration management and compliance engine.
-    * Puppet Enterprise, Puppet's commercial offering that pulls the Bolt and Puppet tools into a single interface with advanced reporting and role-based access capabilities.
-    * Continuous Delivery for Puppet Enterprise, a continuous integration and deployment tool for your infrastructure code.
+* Bolt, an open source task runner and orchestation tool.
+
+* Puppet (the tool), an open source configuration management and compliance engine.
+
+* Puppet Enterprise, Puppet's commercial offering that pulls the Bolt and Puppet tools into a single interface with advanced reporting and role-based access capabilities.
+
+* Continuous Delivery for Puppet Enterprise, a continuous integration and deployment tool for your infrastructure code.
 
 For this interactive guide, we will be mainly focusing on the Bolt tool to get started quickly and mature over time to examples within Puppet Enterprise.
 
