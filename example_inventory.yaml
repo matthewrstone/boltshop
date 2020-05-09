@@ -1,0 +1,11 @@
+groups:
+  - name: windows
+    targets:
+      - server1
+      - server2
+    config:
+      transport: winrm
+      winrm:
+        user: Administrator
+        password: Pass1word
+        ssl: false

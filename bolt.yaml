@@ -1,0 +1,2 @@
+hiera-configkey: ./hiera.yaml
+inventoryfile: ./inventory.yaml

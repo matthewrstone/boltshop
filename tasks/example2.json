@@ -1,0 +1,9 @@
+{
+    "description": "The bird is the word.",
+    "parameters": {
+        "word": {
+            "type": "Enum['bird','other_bird']",
+            "description": "This is the word."
+        }
+    }
+}

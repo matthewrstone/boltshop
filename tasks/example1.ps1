@@ -1,0 +1,1 @@
+Write-Output "I am a simple Bolt task"
