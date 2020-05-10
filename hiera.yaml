@@ -8,7 +8,10 @@ hierarchy:
     path: "nodes/%{trusted.certname}.yaml"
 
   - name: "Server Type" # Uses custom facts.
-    path: "server_type/%{facts.server_type}"
+    path: "server_type/%{facts.server_type}.yaml"
   
-  - name: "Common"
+  - name: "Team"
+    path: "team/%{facts.team}.yaml"
+  
+  - name: "Common Items"
     path: "common.yaml"

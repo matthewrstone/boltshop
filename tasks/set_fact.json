@@ -1,0 +1,13 @@
+{
+    "description": "Creates a JSON task on a Windows Server.",
+    "parameters": {
+        "fact_name": {
+            "type": "String[1]",
+            "description": "The name of the fact to create."
+        },
+        "fact_value": {
+            "type": "String[1]",
+            "description": "The value of the fact to create."
+        }
+    }
+}

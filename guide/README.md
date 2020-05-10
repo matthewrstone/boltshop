@@ -27,6 +27,7 @@
 - [Managing Windows Power Settings](baseline/power-settings.md)
 - [Adding a Scheduled Task](baseline/scheduled-task.md)
 - [Setting the Logon Message](baseline/logon-message.md)
+- [Managing Packages with Chocolatey](baseline/managing-packages.md)
 
 ### [Windows Security](#security)
 - [Managing Windows Defender](baseline/windows-defender.md)

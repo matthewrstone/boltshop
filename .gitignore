@@ -1,3 +1,4 @@
 .resource_types
 /modules
 inventory.yaml
+.rerun.json
