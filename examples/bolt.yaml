@@ -1,0 +1,11 @@
+hiera-configkey: ./hiera.yaml
+inventoryfile: ./inventory.yaml
+puppetdb:
+  server_urls: ["<your puppet master>:8081"]
+  cacert: "C:\\ProgramData\\PuppetLabs\\puppet\\etc\\ssl\\certs\\ca.pem"
+  token: ~/.puppetlabs/token
+pcp:
+  task-environment: production
+  service-url: https://<your puppet master>:8143
+  cacert: "C:\\ProgramData\\PuppetLabs\\puppet\\etc\\ssl\\certs\\ca.pem"
+  token: ~/.puppetlabs/token
