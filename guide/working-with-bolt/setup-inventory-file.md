@@ -30,31 +30,31 @@ That's all there is to a basic inventory. You can make those adjustments then sa
 
 ## Using the Azure Inventory plugin
 
+    groups:
+    - name: azure
+        targets:
+        - _plugin: azure_inventory
+        client_id: <azure appId>
+        tenant_id: <azure tenantId>
+        client_secret: <azure password from azcli command>
+        subscription_id: <azure id>
+        resource_group: wsp
+        location: westus
+        tags:
+            project: wsp
+        config:
+        transport: winrm
+        winrm:
+            user: <azure win admin username>
+            password: <azure win admin password>
+            ssl: <true or false depending on config>
+
 Prerequisites:
 
 * Run az ad sp create-for-rbac and copy the appId and password fields. These correspond to the client_id and client_secret parameters to the task.
 
 * You will also need to know your subscription ID and tenant ID. If you're using the Azure CLI, you can retrieve these with az account show. These will be in the id and tenantId fields respectively.
 Dynamic inventory with Azure:
-
-    groups:
-      - name: azure
-        targets:
-          - _plugin: azure_inventory
-          client_id: <azure appId>
-          tenant_id: <azure tenantId>
-          client_secret: <azure password from azcli command>
-          subscription_id: <azure id>
-          resource_group: wsp
-          location: westus
-          tags:
-            project: wsp
-        config:
-          transport: winrm
-          winrm:
-            user: <azure win admin username>
-            password: <azure win admin password>
-            ssl: <true or false depending on config>
 
 ## Wrap Up
 
