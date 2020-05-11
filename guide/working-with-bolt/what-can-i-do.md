@@ -19,3 +19,7 @@ After you run `bolt` with `command`, `script`, `task`, or `plan`, you can also s
 Bolt also has the ability to upload files and other items that we will cover throughout the course. To upload a file, run 
 
     bolt file upload <source> <destination> --targets <target_name(s)>
+
+## Wrap Up
+
+Bolt can do a lot of things. From simple commands to advanced workflows and everything in between. We looked at the basic command structure and syntax and are now ready to move into learning about what we'll be doing with those commands.

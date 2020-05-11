@@ -1,0 +1,9 @@
+# What is a Baseline configuration?
+
+One of the better use cases for Puppet throughout the years has been driving consistent configuration to systems so you can manage them at scale. A big way to make improvements is to standardize the initial OS configuration.
+
+You may be doing this today, and probably have many different ways it is applied. Golden images, GPOs, scripts, guest customizations, manual tasks - usually all of the above apply when it comes to building a "standard image" in an environment. With Bolt/Puppet you can write that configuration into *desired state*, which will not only put things the way they should be but bring the server back into compliance when it drifts. While Bolt runs on-demand, by installing a puppet agent and connecting to Puppet Enterprise you gain continuous enforcement of that base image.
+
+What does that ultimately mean? Imagine a single golden image, just plain ol' vanilla Windows. Once it connects to puppet, all the "Golden Image" customizations, GPOs, scripts, guest customizations, etc... are not only applied, but **enforced**. It's now *living code*, which means when you change that desired state code you can apply it to all systems, and all the current systems plus the ones that haven't been built yet will get that code. No more maintaining separate configurations of golden images, just a single image per OS that you update with patches.
+
+In this guide, we'll be using Bolt, which will allow us to apply that desired state code, but in an on-demand fashion. That means any time we want to enforce or change our servers we will need to run Bolt again.

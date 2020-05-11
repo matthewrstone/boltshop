@@ -10,21 +10,23 @@
 | [Windows Updates](#windows-updates) | A patching primer for updating your Windows servers. 
 | [Using DSC](#dsc) | Level up your PowerShell DSC with our tools.
 | [Building an IIS Server](#building-an-iis-server) | Use a mix of desired state and tasks to building a Windows Web Server and deploy assets for a webpage.
-| [Bringing in Chocolatey](#bringing-in-chocolatey) | Chocolatey is a great package management tool for Windows that integrates amazingly well in either task-based or desired state automation.
+| [Advanced Chocolatey Management](#advanced-chocolatey) | Chocolatey is a great package management tool for Windows that integrates seamlessly with Puppet tools. We'll look at some of the additional configuration tasks to use it in corporate environments.
 | [Bringing it all Together in Puppet Enterprise](#puppet-enterprise) | You've seen task and plan based automation. You've seen desired state applied. Now let's bring it together with continuous enforcement, RBAC, CI/CD and a graphical interface for reporting and task execution.
 
 ### [Working with Bolt](#working-with-bolt)
+
 - [Installing Bolt](working-with-bolt/installing.md) 
 - [Setting Up Your Inventory File](working-with-bolt/setup-inventory-file.md)
 - [What can I do with Bolt?](working-with-bolt/what-can-i-do.md)
 - [Using Puppet DSL in Bolt Plans](working-with-bolt/using-puppet-modules-and-code-in-bolt-plans.md)
-- [Writing Tasks & Plans](working-with-bolt/writing-tasks-and-plans.md)
-- [Documenting Tasks](working-with-bolt/documenting-tasks)
+- [Writing Tasks](working-with-bolt/writing-tasks.md)
+- [Writing Plans](working-with-bolt/writing-plans.md)
 - [Using Puppet Forge Modules](working-with-bolt/using-the-forge.md)
 
 ### [Baseline Configuration Items](#baseline)
+
 - [What is a Baseline Configuration?](baseline/what-is-a-baseline.md)
-- [Managing Windows Power Settings](baseline/power-settings.md)
+- [Managing Windows Power Settings](baseline/manage-power-settings.md)
 - [Adding a Scheduled Task](baseline/scheduled-task.md)
 - [Setting the Logon Message](baseline/logon-message.md)
 - [Managing Packages with Chocolatey](baseline/managing-packages.md)
@@ -53,20 +55,21 @@
 
 ### [Building an IIS Server](#building-an-iis-server)
 
-[Building and IIS Server](iis/building-an-iis-server.md)
-[Deploying a an Application](iis/deploying-an-application.md)
-  (use upload_files, then move to chocolatey and explain other tools)
+- [Building an IIS Server](iis/building-an-iis-server.md)
+- [Deploying a Website](iis/deploying-an-application.md)
 
-### [Bringing in Chocolatey](#bringing-in-chocolatey)
+### [Advanced Chocolatey Management](#advanced-chocolatey)
 
-  - [Intro to Chocolatey for Package Management](chocolatey/intro-to-chocolatey-for-package-management.md)
-  - [Using Chocolatey in the Enterprise](chocolatey/using-chocolatey-in-the-enterprise.md)
-  - [Installing Packages with Tasks](chocolatey/installing-packages.md)
-  - [Managing Chocolatey Configuration with Plans](chocolatey/managing-chocolatey-configuration-with-plans)
-  - [Creating an Internal Chocolatey Repository](chocolatey/creating-an-internal-repository)
+- [Using Chocolatey in the Enterprise](chocolatey/using-chocolatey-in-the-enterprise.md)
+- [Creating an Internal Chocolatey Repository](chocolatey/creating-an-internal-repository)
+- [Managing Chocolatey Sources](chocolatey/managing-chocolatey-configuration-with-plans)
 
 ### [Bringing it all Together in Puppet Enterprise](#puppet-enterprise)
 
+ - [Why move to Puppet Enterprise?](puppet-enterprise/why-move.md)
+ - [Deploying a Puppet Enterprise POC Environment](puppet-enterprise/poc.md)
+ - [Deploying a CD4PE POC Environment](puppet-enterprise/cd4pe.md)
+ - [Converting Plans to Profile](puppet-enterprise/plans-to-profiles)
 
 
-
+### Next Steps

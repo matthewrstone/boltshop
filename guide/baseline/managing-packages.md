@@ -54,6 +54,7 @@ By default, a hiera lookup for this data will pull from all these sources where 
       - microsoft-edge
 
 **team/devops.yaml**
+
     ---
     windows::packages:
       - git
