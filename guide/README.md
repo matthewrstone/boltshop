@@ -18,9 +18,9 @@
 - [Installing Bolt](working-with-bolt/installing.md) 
 - [Setting Up Your Inventory File](working-with-bolt/setup-inventory-file.md)
 - [What can I do with Bolt?](working-with-bolt/what-can-i-do.md)
-- [Using Puppet DSL in Bolt Plans](working-with-bolt/using-puppet-modules-and-code-in-bolt-plans.md)
 - [Writing Tasks](working-with-bolt/writing-tasks.md)
 - [Writing Plans](working-with-bolt/writing-plans.md)
+- [Using Puppet DSL in Bolt Plans](working-with-bolt/using-puppet-modules-and-code-in-bolt-plans.md)
 - [Using Puppet Forge Modules](working-with-bolt/using-the-forge.md)
 
 ### [Baseline Configuration Items](#baseline)
