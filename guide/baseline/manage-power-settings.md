@@ -6,7 +6,7 @@ In this section we will configure a component of Windows power settings. One of 
 
   1. Open `plans/baseline/windows.pp` in Visual Studio Code. We will be building our baseline by uncommenting existing code blocks here.
 
-  2. Uncomment lines 10-14. Puppet DSL allows you to keep comments in your code using `#` at the beginning of the line, so as you can see I've given a description of what this registry key will manage and a link to the supporting documentation for managing registry keys.
+  2. Uncomment lines 15-19. Puppet DSL allows you to keep comments in your code using `#` at the beginning of the line, so as you can see I've given a description of what this registry key will manage and a link to the supporting documentation for managing registry keys.
 
   3. Save windows.pp. If the vscode puppet plugin detects any errors, please read and resolve them before continuing.
 
