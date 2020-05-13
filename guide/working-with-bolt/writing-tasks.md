@@ -50,8 +50,6 @@ Stunningly informative, right? If I passed this task to another person they'd kn
 
 Excellent, more information! We now know that the bird is the word and we have a parameter the explains we must enter a string. The example shows we have to enter the parameter in order for this script to work. So, let's run the task on our localhost: 
 
-*Note: if you aren't on a Windows system run this from one.)*
-
     PS C:\Users\matthew\Code\wsp> bolt task run wsp::example2 word=bird -t localhost
     Started on localhost...
     Finished on localhost:
@@ -60,6 +58,8 @@ Excellent, more information! We now know that the bird is the word and we have a
         Everybody knows that the bird is the word.
     Successful on 1 target: localhost
     Ran on 1 target in 1.19 sec
+
+One thing to point out here: this should have run successfully wether you are on a Windows machine, a Mac or whatever Linux distro people are installing on their laptops these days. Tasks allows you to create a cross-platform task by using an `implementation` in your metadata. If we look at `tasks/example2.json`, you will see the implementation key along with the logic for what Bolt will do if it detects a *nix shell vs. detecting a Windows shell.
 
 That's all there is to it. We ran a tasks that's really nothing more than PowerShell with some input validation and description added. You can feel free to play around with this task by changing the target or even changing the parameter to a different string, but let's be honest, everybody knows that the bird is the word.
 
@@ -72,24 +72,32 @@ Before we wrap up, let's look at that metadata file by opening `tasks/example2.j
                 "type": "String",
                 "description": "This is the word."
             }
-        }
+        },
+        "implementations": [
+           { "name": "example2.sh", "requirements": ["shell"] },
+           { "name": "example2.ps1", "requirements": ["powershell"] }
+        ]
     }
 
-It's pretty straight forward. We list a description, the parameters, and the type of parameter we are looking for along with a description. We take advantage of using types here, so we can also list out options as well. That's brings us to...
+It's pretty straight forward. We list a description, the implementations, the parameters, and the type of parameter we are looking for along with a description. We take advantage of using types here, so we can also list out options as well. That's brings us to...
 
 ## Exercise #2
 
 Let's change that input and check it out. In VS Code, edit `tasks/example2.json` by changing the word paramter. TYPE should become `Enum["bird","other_bird"]`. For reference:
 
-        {
-            "description": "The bird is the word.",
-            "parameters": {
-                "word": {
-                    "type": "Enum["bird", "other_bird"]",
-                    "description": "This is the word."
-                }
+    {
+        "description": "The bird is the word.",
+        "parameters": {
+            "word": {
+                "type": "Enum["bird", "other_bird"]",
+                "description": "This is the word."
             }
-        }
+        },
+        "implementations": [
+           { "name": "example2.sh", "requirements": ["shell"] },
+           { "name": "example2.ps1", "requirements": ["powershell"] }
+        ]
+    }
 
 Save the file and let's run `bolt task show wsp::example2`.
 

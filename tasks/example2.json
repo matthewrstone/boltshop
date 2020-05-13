@@ -2,8 +2,12 @@
     "description": "The bird is the word.",
     "parameters": {
         "word": {
-            "type": "Enum['bird','other_bird']",
+            "type": "String",
             "description": "This is the word."
         }
-    }
+    },
+    "implementations": [
+       { "name": "example2.sh", "requirements": ["shell"] },
+       { "name": "example2.ps1", "requirements": ["powershell"] }
+    ]
 }
