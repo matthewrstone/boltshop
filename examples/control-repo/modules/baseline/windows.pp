@@ -13,7 +13,7 @@ class baseline::windows(){
   # Adding a Scheduled Task
   # https://forge.puppet.com/puppetlabs/scheduled_task
   scheduled_task { 'Clean Temp Folder Nightly':
-    command   => "$::system32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    command   => "$::system32\\WindoboltshopowerShell\\v1.0\\powershell.exe",
     arguments => 'Remove-Item C:\\Temp\\* -Recurse -Force',
     enabled   => 'true',
     trigger   => [{

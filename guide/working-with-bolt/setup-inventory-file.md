@@ -38,10 +38,10 @@ That's all there is to a basic inventory. You can make those adjustments then sa
         tenant_id: <azure tenantId>
         client_secret: <azure password from azcli command>
         subscription_id: <azure id>
-        resource_group: wsp
+        resource_group: boltshop
         location: westus
         tags:
-            project: wsp
+            project: boltshop
         config:
         transport: winrm
         winrm:

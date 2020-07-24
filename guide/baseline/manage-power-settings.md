@@ -10,16 +10,16 @@ In this section we will configure a component of Windows power settings. One of 
 
   3. Save windows.pp. If the vscode puppet plugin detects any errors, please read and resolve them before continuing.
 
-  4.  From your powershell prompt in the repo root directory, run `bolt plan run wsp::baseline::windows -t windows`
+  4.  From your powershell prompt in the repo root directory, run `bolt plan run boltshop::baseline::windows -t windows`
   
   5. We will see results listed as changed, skipped or failed items. This is a summary report. Example:
 
-    Starting: plan wsp::baseline::windows
+    Starting: plan boltshop::baseline::windows
     Starting: install puppet and gather facts on dc01.puppetdemos.com, dc02.puppetdemos.com
     Finished: install puppet and gather facts with 0 failures in 41.19 sec
     Starting: apply catalog on dc01.puppetdemos.com, dc02.puppetdemos.com
     Finished: apply catalog with 0 failures in 41.37 sec
-    Finished: plan wsp::baseline::windows in 1 min, 23 sec
+    Finished: plan boltshop::baseline::windows in 1 min, 23 sec
     Finished on dc01.puppetdemos.com:
       changed: 0, failed: 0, unchanged: 2 skipped: 0, noop: 0
     Finished on dc02.puppetdemos.com:

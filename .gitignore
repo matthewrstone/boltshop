@@ -1,5 +1,6 @@
 .resource_types
 /modules
-inventory.yaml
 .rerun.json
 .rerun.json
+terraform/azure/.terraform*
+terraform/azure/terraform.tfstate*

@@ -1,0 +1,14 @@
+groups:
+  - name: azure
+    targets:
+      - _plugin: terraform
+        dir: ./terraform/azure
+        resource_type: azurerm_public_ip
+        target_mapping:
+          uri: fqdn
+    config:
+      transport: winrm
+      winrm:
+        user: boltadmin
+        password: "Bolt$hop20"
+        ssl: false

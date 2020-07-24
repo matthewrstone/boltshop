@@ -1,4 +1,4 @@
-plan wsp::chocolatey::install_packages(
+plan boltshop::chocolatey::install_packages(
   TargetSpec $targets
 ) {
   apply_prep($targets)

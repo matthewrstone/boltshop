@@ -36,7 +36,6 @@
 - [Managing Windows Firewall](security/managing-windows-firewall.md)
 - [Exporting Group Policy into Puppet Resources](security/exporting-gpo.md)
 - [Applying Security Policies](security/applying-security-policies.md)
-- [Applying CIS Controls](security/applying-cis-controls.md)
 - [Validating Ongoing Compliance in PE](security/cis-compliance.md)
 
 ### [Windows Updates](#windows-updates)

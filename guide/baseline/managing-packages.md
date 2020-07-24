@@ -64,7 +64,7 @@ If I have a server with a team fact of `devops`, I'll get all three packages. If
 
 Now that we have those pieces together, we can now look at our bolt plan for managing packages, which takes one step further into the puppet language by using functions and an iterator (knowledge is power!).
 
-    plan wsp::baseline::packages(
+    plan boltshop::baseline::packages(
       TargetSpec $targets
     ) {
       apply_prep($targets)
@@ -95,12 +95,12 @@ The last thing we need? A team fact!
 
 ## Exercise #1: Add a team fact
 
-From your project directory, run `bolt task show wsp::set_fact`.
+From your project directory, run `bolt task show boltshop::set_fact`.
 
-    wsp::set_fact - Creates a JSON task on a Windows Server.
+    boltshop::set_fact - Creates a JSON task on a Windows Server.
 
     USAGE:
-    bolt task run --targets <node-name> wsp::set_fact fact_name=<value> fact_value=<value>
+    bolt task run --targets <node-name> boltshop::set_fact fact_name=<value> fact_value=<value>
 
     PARAMETERS:
     - fact_name: String[1]
@@ -110,7 +110,7 @@ From your project directory, run `bolt task show wsp::set_fact`.
 
 Documentation rules, no? This task is a PowerShell script will set a custom fact for you. It creates a JSON file in the default fact lookup location on the server, which was created on our first `apply_prep()` at the beginning of the guide. We simply need to give it a fact_name and a fact_value.
 
-From your project directory, run `bolt task run wsp::set_fact -t <one_of_your_servers> fact_name=team fact_value=devops`. We want to have only **one** server get the team fact so we can validate which packages were installed. When that is complete, run `bolt task run facts -t <the_same_server>`. You should see more information than I'm willing to paste into Markdown, so let's look at the relevant portion:
+From your project directory, run `bolt task run boltshop::set_fact -t <one_of_your_servers> fact_name=team fact_value=devops`. We want to have only **one** server get the team fact so we can validate which packages were installed. When that is complete, run `bolt task run facts -t <the_same_server>`. You should see more information than I'm willing to paste into Markdown, so let's look at the relevant portion:
 
     "system32": "C:\\Windows\\system32",
     "system_uptime": {
@@ -127,7 +127,7 @@ There we go! Along-side our built-in fats like timezone, uptime, etc... is now a
 
 ## Exercise #2: Managing Packages
 
-From your project directory, run `bolt plan run wsp::baseline::packages -t windows`. 
+From your project directory, run `bolt plan run boltshop::baseline::packages -t windows`. 
 
 Once completed, we can validate the packages by using chocolatey. From your project directory, run `bolt command run 'choco list --lo' -t windows`.
 

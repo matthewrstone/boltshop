@@ -15,42 +15,42 @@ The difference is with tasks, you can also add items like which implementation t
 
 ## Exercise #1
 
-From your PowerShell prompt, change location to this project directory. Run `bolt task show` and you will see a variety of tasks listed. Look for `wsp::example` and you will find two tasks listed:
+From your PowerShell prompt, change location to this project directory. Run `bolt task show` and you will see a variety of tasks listed. Look for `boltshop::example` and you will find two tasks listed:
 
-    wsp::example1
-    wsp::example2                 The bird is the word.
+    boltshop::example1
+    boltshop::example2                 The bird is the word.
 
 Notice the first example has no description, while the second does. This is the difference between dropping a PowerShell script into the tasks folder vs. adding metadata. Let's drive a little further into these tasks:
 
-    PS C:\Users\matthew\Code\wsp> bolt task show wsp::example1
+    PS C:\Users\matthew\Code\boltshop> bolt task show boltshop::example1
 
-    wsp::example1
+    boltshop::example1
 
     USAGE:
-    bolt task run --targets <node-name> wsp::example1
+    bolt task run --targets <node-name> boltshop::example1
 
     MODULE:
-    C:/Users/matthew/Code/wsp
+    C:/Users/matthew/Code/boltshop
 
 Stunningly informative, right? If I passed this task to another person they'd know how to run it, which is the same as any other task, and where it is, which could be useful for trying to figure out what this actually does. Now let's look at the second example
 
-    PS C:\Users\matthew\Code\wsp> bolt task show wsp::example2
+    PS C:\Users\matthew\Code\boltshop> bolt task show boltshop::example2
 
-    wsp::example2 - The bird is the word.
+    boltshop::example2 - The bird is the word.
 
     USAGE:
-    bolt task run --targets <node-name> wsp::example2 word=<value>
+    bolt task run --targets <node-name> boltshop::example2 word=<value>
 
     PARAMETERS:
     - word: String
         This is the word.
 
     MODULE:
-    C:/Users/matthew/Code/wsp
+    C:/Users/matthew/Code/boltshop
 
 Excellent, more information! We now know that the bird is the word and we have a parameter the explains we must enter a string. The example shows we have to enter the parameter in order for this script to work. So, let's run the task on our localhost: 
 
-    PS C:\Users\matthew\Code\wsp> bolt task run wsp::example2 word=bird -t localhost
+    PS C:\Users\matthew\Code\boltshop> bolt task run boltshop::example2 word=bird -t localhost
     Started on localhost...
     Finished on localhost:
         I am a task with inputs.
@@ -99,28 +99,28 @@ Let's change that input and check it out. In VS Code, edit `tasks/example2.json`
         ]
     }
 
-Save the file and let's run `bolt task show wsp::example2`.
+Save the file and let's run `bolt task show boltshop::example2`.
 
-    PS C:\Users\matthew\Code\wsp> bolt task show wsp::example2
+    PS C:\Users\matthew\Code\boltshop> bolt task show boltshop::example2
 
-    wsp::example2 - The bird is the word.
+    boltshop::example2 - The bird is the word.
 
     USAGE:
-    bolt task run --targets <node-name> wsp::example2 word=<value>
+    bolt task run --targets <node-name> boltshop::example2 word=<value>
 
     PARAMETERS:
     - word: Enum['bird','other_bird']
         This is the word.
 
-Now we can see the options we have, `bird` or `other_bird`. Try running `bolt task run -t localhost wsp::example2 word=chicken`.
+Now we can see the options we have, `bird` or `other_bird`. Try running `bolt task run -t localhost boltshop::example2 word=chicken`.
 
-    PS C:\Users\matthew\Code\wsp> bolt task run -t localhost wsp::example2 word=chicken
-    Task wsp::example2:
+    PS C:\Users\matthew\Code\boltshop> bolt task run -t localhost boltshop::example2 word=chicken
+    Task boltshop::example2:
        parameter 'word' expects a match for Enum['bird', 'other_bird'], got 'chicken'
 
-Errors afoot! Chicken cannot be the word, only `bird` or `other_bird`. Let's try again with `bolt task run -t localhost wsp::example2 word=other_bird`.
+Errors afoot! Chicken cannot be the word, only `bird` or `other_bird`. Let's try again with `bolt task run -t localhost boltshop::example2 word=other_bird`.
 
-    PS C:\Users\matthew\Code\wsp> bolt task run -t localhost wsp::example2 word=other_bird
+    PS C:\Users\matthew\Code\boltshop> bolt task run -t localhost boltshop::example2 word=other_bird
     Started on localhost...
     Finished on localhost:
         I am a task with inputs.

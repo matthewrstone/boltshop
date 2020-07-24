@@ -10,7 +10,7 @@ In this section we will configure a Windows scheduled task. In this particular c
 
   3. Save windows.pp. If the vscode puppet plugin detects any errors, please read and resolve them before continuing.
 
-  4. From your powershell prompt in the repo root directory, run `bolt plan run wsp::baseline::windows -t windows`
+  4. From your powershell prompt in the repo root directory, run `bolt plan run boltshop::baseline::windows -t windows`
   
   5. We should see the changed items in the summary report.
 

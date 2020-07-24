@@ -1,8 +1,8 @@
-plan wsp::baseline::windows(
+plan boltshop::baseline::windows(
   TargetSpec $targets
   ) {
   # Leave this commented out. We will use it later for MOTD
-  $motd = file::read('wsp/motd.txt')
+  $motd = file::read('boltshop/motd.txt')
   apply_prep($targets)
   # Intro to Bolt Data Types
   # https://puppet.com/docs/bolt/latest/bolt_types_reference.html
@@ -21,7 +21,7 @@ plan wsp::baseline::windows(
     # Adding a Scheduled Task
     # https://forge.puppet.com/puppetlabs/scheduled_task
     # scheduled_task { 'Clean Temp Folder Nightly':
-    #   command   => "$::system32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    #   command   => "$::system32\\WindoboltshopowerShell\\v1.0\\powershell.exe",
     #   arguments => 'Remove-Item C:\\Temp\\* -Recurse -Force',
     #   enabled   => 'true',
     #   trigger   => [{

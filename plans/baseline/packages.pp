@@ -1,4 +1,4 @@
-plan wsp::baseline::packages(
+plan boltshop::baseline::packages(
   TargetSpec $targets
 ) {
   apply_prep($targets)

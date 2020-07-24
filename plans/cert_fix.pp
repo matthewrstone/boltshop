@@ -1,14 +1,4 @@
-# Plan: wsp::cert_fix
-#
-# Description:
-#   This plan will resolve issues with SSL connect errors on
-#   Windows systems when trying to download modules via `bolt puppetfile install`
-#   or via project initialization.
-#
-# Parameters:
-#
-#   $targets = the target(s) to fix (comma-delimted)
-plan wsp::cert_fix(TargetSpec $targets){
+plan boltshop::cert_fix(TargetSpec $targets){
   apply_prep($targets)
 
   $result = apply($targets) {

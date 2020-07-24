@@ -18,7 +18,7 @@ For Bolt to apply puppet code on your infrastructure it must go through what is 
 
 Those modules must exist on your client for them to transfer over to the targets. To download these modules, from the root of this project type `bolt puppetfile install`. They should all download to the modules/ folder.
 
-If for some reason you get an SSL connect error (on Windows systems), please run `bolt plan run -t localhost wsp::cert_fix` to resolve that issue, then run `bolt puppetfile install` again.
+If for some reason you get an SSL connect error (on Windows systems), please run `bolt plan run -t localhost boltshop::cert_fix` to resolve that issue, then run `bolt puppetfile install` again.
 
 ## Wrap Up
 

@@ -29,13 +29,17 @@ In this guide we will be working with Puppet's Declarative Style Language (DSL),
 It is highly recommended to install Bolt, Git, VisualStudio Code and the puppet plugin for VS Code in order to find the most success. You can literally write puppet code in notepad.exe, but I wouldn't recommend it.
 
 
-## What infrastructure do I need to work through this guide?
+## What infrastructure do I need to work through BoltShop?
 
 I'd recommend 3 Windows Servers, 2016 or higher. Some of the examples will deal with setting up Active Directory, setting up WSUS server and client and setting up an IIS server. While you can pile these roles on top of each other on a single server, part of the fun of using Bolt is the ability to affect change on multiple servers at the same time.
 
 If you wish to setup Puppet Enterprise and CD4PE, you will need to Linux VMs, and I would recommend 4 cores and 8GB of RAM. There are trial versions of both products and we will walk through bootstrapping your PE environment towards the end of the guide.
 
 All servers should have outbound access to the Internet. It's not required for PE, but additional configuration is required to make all the pieces work, so let's keep it simple.
+
+### Using Azure for BoltShop
+
+It just so happens that using the magic of Bolt and Terraform together, you can spin up Windows VMs on your own dime to work through this guide. Please checkout [Provisioning Azure Instances with Terraform](guide/provisioning-azure.md) for more information on how to get that going.
 
 ## Wrap Up
 

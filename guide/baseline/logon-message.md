@@ -10,16 +10,16 @@ In this section we will use the *puppetlabs-motd* module to change our logon mes
 
   3. Save windows.pp. If the vscode puppet plugin detects any errors, please read and resolve them before continuing.
 
-  4.  From your powershell prompt in the repo root directory, run `bolt plan run wsp::baseline::windows -t windows`
+  4.  From your powershell prompt in the repo root directory, run `bolt plan run boltshop::baseline::windows -t windows`
   
   5. We will see results listed as changed, skipped or failed items. This is a summary report. Example:
 
-    Starting: plan wsp::baseline::windows
+    Starting: plan boltshop::baseline::windows
     Starting: install puppet and gather facts on dc01.puppetdemos.com, dc02.puppetdemos.com
     Finished: install puppet and gather facts with 0 failures in 21.12 sec
     Starting: apply catalog on dc01.puppetdemos.com, dc02.puppetdemos.com
     Finished: apply catalog with 0 failures in 21.47 sec
-    Finished: plan wsp::baseline::windows in 1 min, 29 sec
+    Finished: plan boltshop::baseline::windows in 1 min, 29 sec
     Finished on dc01.puppetdemos.com:
       changed: 1, failed: 0, unchanged: 0 skipped: 0, noop: 0
     Finished on dc02.puppetdemos.com:
@@ -43,8 +43,8 @@ Let's get a quick summary of what we are doing here. We have a file with the mot
 
 I like the second option as it doesn't clutter up your system with unnecessary files. In line 5, we are telling Bolt to read the contents of the file into the `$motd` variable. Then in like 44, instead of a string we are using that variable for the content.
 
-4. From your powershell prompt in the repo root directory, run `bolt plan run wsp::baseline::windows -t windows`. Your logon message should now be changed and you can log out and back in to RDP to verify.
+4. From your powershell prompt in the repo root directory, run `bolt plan run boltshop::baseline::windows -t windows`. Your logon message should now be changed and you can log out and back in to RDP to verify.
 
 ## Wrap Up
 
-An interesting difference here between using Bolt and Puppet is that Puppet is agent-based and have a central *puppet master* to store your code and files. Part of the Puppet server capabilities is file serving, so we can store our file on the server and refer to the location as `puppet:///modules/wsp/motd.txt` and it will magically find our text file. We will see examples of that later in the Puppet Enterprise section, but for now reading files out of a repo like this is the best option.
+An interesting difference here between using Bolt and Puppet is that Puppet is agent-based and have a central *puppet master* to store your code and files. Part of the Puppet server capabilities is file serving, so we can store our file on the server and refer to the location as `puppet:///modules/boltshop/motd.txt` and it will magically find our text file. We will see examples of that later in the Puppet Enterprise section, but for now reading files out of a repo like this is the best option.
